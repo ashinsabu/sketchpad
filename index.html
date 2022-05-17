@@ -8,18 +8,22 @@
     <title>Sketchpad</title>
 </head>
 <body>
-    <h1>SketchPad</h1>
+    <h1 id="main-heading">Sketch-Pad</h1>
     <div class="row-container">
         <div class="grid-container">
 
         </div>
         <div class="col-container">
-            Number of grid squares: 
+            <h2 style="margin-bottom: 8px;">Number of grid squares: </h2>
             <div class="slidecontainer">
                 <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
             </div>
+            <div class="gridsquarenumber" style="text-align: center;"></div>
+            <div class="eraser">Eraser</div>
+            <div class="resetbutton">Clear</div>
         </div>
     </div>
+    <span>Copyright &copy Ashin Sabu 2022</span>
     <script src="script.js"></script>
 </body>
 </html>

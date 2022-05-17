@@ -2,15 +2,27 @@ let gridcontainer = document.querySelector('.grid-container');
 let n=8; 
 document.querySelector('.gridsquarenumber').innerHTML=n+"x"+n +" squares";
 let slider = document.getElementsByClassName("slider")[0];
-slider.addEventListener('input',(e) => {n=(e.target.valueAsNumber); document.querySelector('.gridsquarenumber').innerHTML=n+"x"+n +" squares"; ;creategrid(n);});
+slider.addEventListener('input',(e) => {n=(e.target.valueAsNumber); document.querySelector('.gridsquarenumber').innerHTML=n+"x"+n +" squares"; creategrid(n);});
+
+let color='grey';
+
+let pen = document.querySelector('.pen');
+pen.addEventListener('click',()=>{color='grey'; eraser.style.background = ''; pen.style.background='grey';});
+
+let eraser = document.querySelector('.eraser');
+eraser.addEventListener('click',()=>{color='white'; pen.style.background = ''; eraser.style.background='grey';});
+
+let resetbutton = document.querySelector('.resetbutton');
+resetbutton.addEventListener('click',(e)=>{creategrid(n);});
 
 function addingElistener(){
     gridsquares = document.querySelectorAll('.grid-square');
     gridsquares.forEach(div => {
         div.addEventListener('mouseover',(e) => {
             if(e.buttons == 1)
-                div.style.backgroundColor='grey';
+                div.style.backgroundColor=color;
         })
+        div.addEventListener('click',(e)=>{div.style.backgroundColor=color;})
     });
 }
 

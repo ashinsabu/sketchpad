@@ -53,6 +53,18 @@ body{
     cursor: pointer;
     transform: scale(1.1);
 }
+.pen{
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid black;
+    transition: transform 0.1s;
+    box-shadow: 0 0 3px black;
+}
+.pen:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
   .resetbutton{
       background-color: darkred;
       color: white;

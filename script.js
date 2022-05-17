@@ -1,13 +1,16 @@
 let gridcontainer = document.querySelector('.grid-container');
-let n=8; 
+let n=16; 
 document.querySelector('.gridsquarenumber').innerHTML=n+"x"+n +" squares";
 let slider = document.getElementsByClassName("slider")[0];
 slider.addEventListener('input',(e) => {n=(e.target.valueAsNumber); document.querySelector('.gridsquarenumber').innerHTML=n+"x"+n +" squares"; creategrid(n);});
-
 let color='grey';
+let colorpicker = document.getElementById('html5colorpicker');
+colorpicker.value='#696969';
+colorpicker.addEventListener('input',(e) => {color = (e.target.value)});
+
 
 let pen = document.querySelector('.pen');
-pen.addEventListener('click',()=>{color='grey'; eraser.style.background = ''; pen.style.background='grey';});
+pen.addEventListener('click',()=>{color=colorpicker.value; eraser.style.background = ''; pen.style.background='grey';});
 
 let eraser = document.querySelector('.eraser');
 eraser.addEventListener('click',()=>{color='white'; pen.style.background = ''; eraser.style.background='grey';});

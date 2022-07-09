@@ -1,6 +1,5 @@
 # Summary
-An online sketchpad built without using any frameworks to display Vanilla JS’s DOM manipulation features in
-depth. 
+An online sketchpad built in vanilla JS.
 
 # View the Page
 View the page hosted on GitHub pages at https://ashinsabu.github.io/sketchpad/.
